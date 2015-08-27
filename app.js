@@ -1,9 +1,17 @@
 angular.module("angularBlog", [])
+.factory('posts', [function(){
+	var o = {
+		posts: []
+	};
+	return o
+}])
+
 .controller("MainCtrl", [
-'$scope', 
+'$scope', 'posts', 
 	function($scope){
 		$scope.test = "HELLO WORLD!"
 
+		$scope.posts = posts.posts;
 		$scope.posts = [
 			{title: 'post 1', upvotes: 5},
 			{title: 'post 2', upvotes: 2},
