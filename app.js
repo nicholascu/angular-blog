@@ -14,8 +14,13 @@ angular.module("angularBlog", [])
 
 		$scope.addPost = function(){
 			if(!$scope.title || $scope.title ===''){ return;} // prevent blank title
-			$scope.posts.push({title: $scope.title, upvotes: 0});
+			$scope.posts.push({
+				title: $scope.title,
+				link: $scope.link,
+				upvotes: 0
+			});
 			$scope.title = ''; // clears title for reuse of function
+			$scope.link = '';
 		};
 
 		$scope.incrementUpvote = function(post){
