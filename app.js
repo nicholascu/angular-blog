@@ -16,6 +16,10 @@ angular.module("angularBlog", [])
 			if(!$scope.title || $scope.title ===''){ return;} // prevent blank title
 			$scope.posts.push({title: $scope.title, upvotes: 0});
 			$scope.title = ''; // clears title for reuse of function
-		}
+		};
+
+		$scope.incrementUpvote = function(post){
+			post.upvote += 1;
+		};
 	} // scope function
 ]); // controller
