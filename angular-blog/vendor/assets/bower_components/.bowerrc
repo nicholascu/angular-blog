@@ -1,0 +1,4 @@
+{
+  "directory":"vendor/assets/bower_components"
+}
+ *= require bootstrap/dist/css/bootstrap
